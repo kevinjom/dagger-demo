@@ -23,18 +23,5 @@ public class MessageApi {
 
         return false;
     }
-
-    public static void main(String[] args) {
-        ObjectGraph og = ObjectGraph.create(ApiModule.class);
-        MessageApi messageApi = og.get(MessageApi.class);
-
-        String key = "appkey3223";
-        Message message = new Message();
-        message.setConsumerId("kevinjom");
-        message.setType("mt");
-        message.setBody("hello dagger");
-
-        System.out.println(messageApi.sendMessaeg(key, message));
-    }
 }
 
